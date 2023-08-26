@@ -214,6 +214,12 @@ grafico_barras <- ggplot(data = grafico_data, aes(x = Sexo, y = frequencia_sexo)
 print(grafico_barras)
 
 ```
+```{r,include=FALSE}
+
+# Salvar o gráfico com dimensões personalizadas (width e height em polegadas)
+ggsave("grafico_barrasIdadeFaixa.png", plot = grafico_barras, width = 9, height = 8)
+
+```
 
 ### Organizar em latex essas tabelas
 
@@ -221,7 +227,7 @@ print(grafico_barras)
 
 #### Tabela Pergunta 1
 ```{r}
-summary(df$X1.COMO.VOCE.CLASSIFICARIA.O.TEMPO.GASTO..EM.HORAS..QUE.VOCE.DESTINOU.A.ATIVIDADE.)
+summary(df$x)
 #Tabela Pergunta 1
 tabela_Pergunta1=
   df %>% 
@@ -231,7 +237,6 @@ tabela_Pergunta1=
 
 tabela_Pergunta1
 ```
-
 
 
 
